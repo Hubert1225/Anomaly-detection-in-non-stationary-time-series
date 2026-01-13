@@ -1,0 +1,584 @@
+no_transformation:
+  random:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  stomp:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  graphts:
+    ucr:
+      max_normal_pattern_len: 500
+      wg_default: 30
+      div: 2.0
+      subtr: 20
+    mitbih_arrhythmia:
+      max_normal_pattern_len: 400
+      wg_default: 200
+      div: 1
+      subtr: 15
+    mitbih_supra:
+      max_normal_pattern_len: 200
+      wg_default: 60
+      div: 1
+      subtr: 25
+    srw:
+      max_normal_pattern_len: 250
+      wg_default: 180
+      div: 1
+      subtr: 20
+  norma:
+    ucr:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.4
+    mitbih_arrhythmia:
+      cut_method: max
+      nm_multiplier: 4.0
+      percentage_sel: 0.6
+    mitbih_supra:
+      cut_method: auto
+      nm_multiplier: 2.5
+      percentage_sel: 0.4
+    srw:
+      cut_method: auto
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+  tcnae:
+    ucr:
+      kernel_size: 8
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true
+    mitbih_arrhythmia:
+      kernel_size: 12
+      lr: 0.05
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_supra:
+      kernel_size: 12
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: false
+    srw:
+      kernel_size: 4
+      lr: 0.01
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true
+
+detrend:
+  random:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  stomp:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  graphts:
+    ucr:
+      max_normal_pattern_len: 500
+      wg_default: 30
+      div: 2.0
+      subtr: 20
+    mitbih_arrhythmia:
+      max_normal_pattern_len: 400
+      wg_default: 200
+      div: 1
+      subtr: 20
+    mitbih_supra:
+      max_normal_pattern_len: 200
+      wg_default: 60
+      div: 1
+      subtr: 25
+    srw:
+      max_normal_pattern_len: 250
+      wg_default: 180
+      div: 1
+      subtr: 25
+  norma:
+    ucr:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+    mitbih_arrhythmia:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+    mitbih_supra:
+      cut_method: auto
+      nm_multiplier: 3.0
+      percentage_sel: 0.4
+    srw:
+      cut_method: minmax
+      nm_multiplier: 2.5
+      percentage_sel: 0.6
+  tcnae:
+    ucr:
+      kernel_size: 16
+      lr: 0.003
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_arrhythmia:
+      kernel_size: 8
+      lr: 0.05
+      loss_fun: mse
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: false
+    mitbih_supra:
+      kernel_size: 16
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: true
+    srw:
+      kernel_size: 4
+      lr: 0.01
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true
+
+simple_diff:
+  random:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  stomp:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  graphts:
+    ucr:
+      max_normal_pattern_len: 500
+      wg_default: 50
+      div: 2.0
+      subtr: 15
+    mitbih_arrhythmia:
+      max_normal_pattern_len: 400
+      wg_default: 200
+      div: 1
+      subtr: 25
+    mitbih_supra:
+      max_normal_pattern_len: 200
+      wg_default: 100
+      div: 1
+      subtr: 15
+    srw:
+      max_normal_pattern_len: 250
+      wg_default: 200
+      div: 1
+      subtr: 25
+  norma:
+    ucr:
+      cut_method: max
+      nm_multiplier: 4.0
+      percentage_sel: 0.6
+    mitbih_arrhythmia:
+      cut_method: max
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+    mitbih_supra:
+      cut_method: auto
+      nm_multiplier: 4.0
+      percentage_sel: 0.6
+    srw:
+      cut_method: max
+      nm_multiplier: 3.0
+      percentage_sel: 0.6
+  tcnae:
+    ucr:
+      kernel_size: 8
+      lr: 0.003
+      loss_fun: logcosh
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: true
+    mitbih_arrhythmia:
+      kernel_size: 16
+      lr: 0.003
+      loss_fun: logcosh
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: true
+    mitbih_supra:
+      kernel_size: 8
+      lr: 0.05
+      loss_fun: logcosh
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: false
+    srw:
+      kernel_size: 4
+      lr: 0.003
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true
+
+season_diff:
+  random:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  stomp:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  graphts:
+    ucr:
+      max_normal_pattern_len: 500
+      wg_default: 30
+      div: 2.5
+      subtr: 20
+    mitbih_arrhythmia:
+      max_normal_pattern_len: 400
+      wg_default: 160
+      div: 1
+      subtr: 20
+    mitbih_supra:
+      max_normal_pattern_len: 200
+      wg_default: 60
+      div: 1
+      subtr: 15
+    srw:
+      max_normal_pattern_len: 250
+      wg_default: 180
+      div: 1
+      subtr: 15
+  norma:
+    ucr:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.4
+    mitbih_arrhythmia:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.4
+    mitbih_supra:
+      cut_method: max
+      nm_multiplier: 3.0
+      percentage_sel: 0.4
+    srw:
+      cut_method: max
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+  tcnae:
+    ucr:
+      kernel_size: 4
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_arrhythmia:
+      kernel_size: 4
+      lr: 0.05
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_supra:
+      kernel_size: 12
+      lr: 0.003
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    srw:
+      kernel_size: 16
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true
+
+season_diff_robust:
+  random:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  stomp:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  graphts:
+    ucr:
+      max_normal_pattern_len: 500
+      wg_default: 30
+      div: 2.5
+      subtr: 20
+    mitbih_arrhythmia:
+      max_normal_pattern_len: 400
+      wg_default: 160
+      div: 1
+      subtr: 20
+    mitbih_supra:
+      max_normal_pattern_len: 200
+      wg_default: 60
+      div: 1
+      subtr: 15
+    srw:
+      max_normal_pattern_len: 250
+      wg_default: 180
+      div: 1
+      subtr: 15
+  norma:
+    ucr:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.4
+    mitbih_arrhythmia:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.4
+    mitbih_supra:
+      cut_method: max
+      nm_multiplier: 3.0
+      percentage_sel: 0.4
+    srw:
+      cut_method: max
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+  tcnae:
+    ucr:
+      kernel_size: 4
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_arrhythmia:
+      kernel_size: 4
+      lr: 0.05
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_supra:
+      kernel_size: 12
+      lr: 0.003
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    srw:
+      kernel_size: 16
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true
+
+rolling_mean:
+  random:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  stomp:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  graphts:
+    ucr:
+      max_normal_pattern_len: 500
+      wg_default: 30
+      div: 2.0
+      subtr: 20
+    mitbih_arrhythmia:
+      max_normal_pattern_len: 400
+      wg_default: 200
+      div: 1
+      subtr: 15
+    mitbih_supra:
+      max_normal_pattern_len: 200
+      wg_default: 60
+      div: 1
+      subtr: 25
+    srw:
+      max_normal_pattern_len: 250
+      wg_default: 180
+      div: 1
+      subtr: 20
+  norma:
+    ucr:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.4
+    mitbih_arrhythmia:
+      cut_method: max
+      nm_multiplier: 4.0
+      percentage_sel: 0.6
+    mitbih_supra:
+      cut_method: auto
+      nm_multiplier: 2.5
+      percentage_sel: 0.4
+    srw:
+      cut_method: auto
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+  tcnae:
+    ucr:
+      kernel_size: 8
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true
+    mitbih_arrhythmia:
+      kernel_size: 12
+      lr: 0.05
+      loss_fun: mse
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_supra:
+      kernel_size: 12
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: false
+    srw:
+      kernel_size: 4
+      lr: 0.01
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true
+
+box_cox:
+  random:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  stomp:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  graphts:
+    ucr:
+      max_normal_pattern_len: 500
+      wg_default: 50
+      div: 2.0
+      subtr: 20
+    mitbih_arrhythmia:
+      max_normal_pattern_len: 400
+      wg_default: 180
+      div: 1
+      subtr: 15
+    mitbih_supra:
+      max_normal_pattern_len: 200
+      wg_default: 80
+      div: 1
+      subtr: 15
+    srw:
+      max_normal_pattern_len: 250
+      wg_default: 180
+      div: 1
+      subtr: 15
+  norma:
+    ucr:
+      cut_method: max
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+    mitbih_arrhythmia:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.6
+    mitbih_supra:
+      cut_method: auto
+      nm_multiplier: 2.5
+      percentage_sel: 0.3
+    srw:
+      cut_method: auto
+      nm_multiplier: 3.0
+      percentage_sel: 0.4
+  tcnae:
+    ucr:
+      kernel_size: 8
+      lr: 0.003
+      loss_fun: logcosh
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: false
+    mitbih_arrhythmia:
+      kernel_size: 16
+      lr: 0.05
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_supra:
+      kernel_size: 16
+      lr: 0.01
+      loss_fun: logcosh
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: false
+    srw:
+      kernel_size: 4
+      lr: 0.003
+      loss_fun: mse
+      anom_windows_extraction_method: mahalanobis
+      errors_baseline_correct: false
+
+add_trend:
+  random:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  stomp:
+    ucr:
+    mitbih_arrhythmia:
+    mitbih_supra:
+    srw:
+  graphts:
+    ucr:
+      max_normal_pattern_len: 500
+      wg_default: 30
+      div: 2.0
+      subtr: 10
+    mitbih_arrhythmia:
+      max_normal_pattern_len: 400
+      wg_default: 180
+      div: 1
+      subtr: 15
+    mitbih_supra:
+      max_normal_pattern_len: 200
+      wg_default: 60
+      div: 1
+      subtr: 25
+  norma:
+    ucr:
+      cut_method: minmax
+      nm_multiplier: 4.0
+      percentage_sel: 0.4
+    mitbih_arrhythmia:
+      cut_method: max
+      nm_multiplier: 4.0
+      percentage_sel: 0.3
+    mitbih_supra:
+      cut_method: max
+      nm_multiplier: 2.5
+      percentage_sel: 0.3
+  tcnae:
+    ucr:
+      kernel_size: 16
+      lr: 0.003
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_arrhythmia:
+      kernel_size: 4
+      lr: 0.05
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: false
+    mitbih_supra:
+      kernel_size: 4
+      lr: 0.1
+      loss_fun: logcosh
+      anom_windows_extraction_method: gauss
+      errors_baseline_correct: true

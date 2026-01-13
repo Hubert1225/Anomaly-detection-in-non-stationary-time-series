@@ -1,0 +1,35 @@
+params:
+  general:
+    random_seed: 123
+  load_series_sets:
+    sets: [srw, mitbih_arrhythmia, mitbih_supra, ucr]
+    ucr_max_len: 400000
+    ucr_max_anom_len: 550
+    mitbih_sampto: 300000
+    mitbih_max_contamination: 0.15
+    mitbih_max_anom_len: 550
+    srw_max_anom_len: 550
+  visualize_anoms:
+    sets: [srw, mitbih_arrhythmia, mitbih_supra, ucr]
+    margin_coef: 7.0   # the left and right margin will be set to anom_len * margin_coef
+    max_k_anoms: 15
+  describe_series:
+    sets: [ucr, mitbih_arrhythmia, mitbih_supra, srw]
+    sign_level: 0.01
+    adf_max_lag: 1000
+    min_season: 100
+    max_season: 1000
+    detrend_window_len: 500
+    mwf_min_window_size: 10
+    mwf_max_window_size: 800
+  transform_series:
+    sets_nonstat_removal: [srw, mitbih_arrhythmia, mitbih_supra, ucr]
+    sets_add_trend: [ucr, mitbih_arrhythmia, mitbih_supra]
+    rolling_smoother_window: 10
+    robust_differencing_k: 3
+  detect_anomalies:
+    sets: [ ucr, mitbih_supra ]  # [ mitbih_arrhythmia ]  # [ ucr, mitbih_arrhythmia, mitbih_supra, srw ]
+    methods: [ random, stomp, graphts, norma, tcnae ]
+    transform: add_trend  # one transform per script run
+  evaluation:
+    min_part_detected: 0.3

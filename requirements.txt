@@ -1,0 +1,49 @@
+# numerical & scientific computation & mathematical tools
+
+numpy
+scipy
+cvxopt
+
+# data visualization
+
+matplotlib
+seaborn
+holoviews
+hvplot
+
+# data analysis
+
+pandas
+statsmodels
+
+# data loading & preprocessing
+
+wfdb
+h5py
+
+# machine learning
+
+scikit-learn
+torch
+pytorch-tcn==1.2.1
+torchmetrics
+
+# time series processing & analysis
+arch
+sktime
+tslearn
+stumpy
+wotan
+
+# other tools
+setuptools
+black
+tqdm
+pathos
+pyarrow
+pyyaml
+mpld3==0.1
+networkx
+
+# notebook
+jupyterlab
