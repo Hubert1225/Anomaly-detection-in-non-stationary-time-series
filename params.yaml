@@ -1,6 +1,4 @@
 params:
-  general:
-    random_seed: 123
   load_series_sets:
     sets: [srw, mitbih_arrhythmia, mitbih_supra, ucr]
     ucr_max_len: 400000

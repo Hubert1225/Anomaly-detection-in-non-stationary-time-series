@@ -13,7 +13,7 @@ RESULTS_DIR = os.path.join("results", "visualize_anoms")
 sets_to_visualize = params["visualize_anoms"]["sets"]
 margin_coef = params["visualize_anoms"]["margin_coef"]
 max_k_anoms = params["visualize_anoms"]["max_k_anoms"]
-random_seed = params["general"]["random_seed"]
+random_seed = 123
 
 
 def get_max_margins(ts: TimeSeriesWithAnoms) -> tuple[pd.Series, pd.Series]:
